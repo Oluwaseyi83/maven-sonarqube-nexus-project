@@ -29,8 +29,8 @@ under the License.
   <servers>
     <server>
       <id>nexusdeploymentrepo</id>
-      <username>USER_NAME</username>  <!-- Provide Your Nexus Repository Server Username and Password -->
-      <password>USER_PASSWORD</password>
+      <username>admin</username>  <!-- Provide Your Nexus Repository Server Username and Password -->
+      <password>admin</password>
     </server>
 
   </servers>
@@ -60,8 +60,8 @@ under the License.
        <repository>
          <id>nexus-snapshot-repo</id>
          <name>your custom repo</name>
-         <url>http://ARTIFACTORY_IP_ADDRESS:PORT_NUMBER/repository/SNAPSHOT_REPOSITORY_NAME/</url>
-       </repository>
+         <url>http://172.31.25.255:8081/repository/java-webapp-repository/</url>  <!-- Update the IP/Address to Your Nexus VM IP -->
+       </repository>                                                                                <!-- Mmake sure to create the "maven-snapshots" repo in Nexus -->
 	   
      </repositories>
    </profile>
@@ -71,8 +71,8 @@ under the License.
        <repository>
          <id>nexus-release-repo</id>
          <name>your custom repo</name>
-         <url>http://ARTIFACTORY_IP_ADDRESS:PORT_NUMBER/repository/RELEASE_REPOSITORY_NAME/</url>
-       </repository>
+         <url>http://172.31.25.255:8081/repository/java-webapp-repository/</url>  <!-- Update the IP/Address to Your Nexus VM IP -->
+       </repository>                                                                               <!-- Mmake sure to create the "maven-release" repo in Nexus -->
      </repositories>
    </profile>
    <!--Nexus Repository Manager's Profile End-->
